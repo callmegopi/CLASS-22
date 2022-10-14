@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        @keyframes gopi {
+            from {
+                transform: scale(.1);
+            }
+            to {
+                transform: scale(1);
+            }
+        }
+        .main {
+            width: 400px;
+            margin: auto;
+        }
+        #smallimage {
+            width: 100%;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        #overLay {
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            top: 0;
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.9);
+            transition: 2s;
+            display: none;
+            
+        }
+        #myImage {
+            animation-name: gopi;
+            animation-duration: .6s;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <img src="https://www.w3schools.com/css/img_lights.jpg" alt="" id="smallimage" onclick="showModel()">
+    </div>
+
+    <div id="overLay">
+        <img src="https://www.w3schools.com/css/img_lights.jpg" alt="" id="myImage">
+    </div>
+
+    <script>
+        function showModel() {
+            var overLay = document.getElementById("overLay")
+            overLay.style.display="block"
+            
+        }
+    </script>
+</body>
+</html>
